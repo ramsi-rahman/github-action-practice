@@ -1,0 +1,17 @@
+# goal: whenever someone change the python code "example.py" the linter will check if it is correct format,syntax.
+name: linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    # this step will automatically clone the code of the current branch into the runner 
+    steps:
+      - name: checkout/clone the code
+        uses: actions/checkout@v7
+    # this step is install linting tool
+      - name: install linter
+        run: pip install ruff
