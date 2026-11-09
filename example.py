@@ -3,6 +3,7 @@
 # Body of the mail is in body.txt
 # iam changing this for linter 
 # open names.txt for reading
+print("hello for linter")
 with open("names.txt", 'r', encoding='utf-8') as names_file:
 
     # open body.txt for reading
