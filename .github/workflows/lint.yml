@@ -15,3 +15,5 @@ jobs:
     # this step is install linting tool
       - name: install linter
         run: pip install ruff
+      - name: check the file for linting
+        run: ruff check .
