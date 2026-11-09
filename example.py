@@ -4,10 +4,10 @@
 # iam changing this for linter 
 # open names.txt for reading
 print("hello for linter")
-with open("names.txt", 'r', encoding='utf-8') as names_file:
-
-    # open body.txt for reading
-    with open("body.txt", 'r', encoding='utf-8') as body_file:
+with (
+    open("names.txt", 'r', encoding='utf-8') as names_file,
+    open("body.txt", 'r', encoding='utf-8') as body_file,
+):
 
         # read entire content of the body
         body = body_file.read()
